@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Custom_AdminOverride>
+            <version>0.0.1</version>
+        </Custom_AdminOverride>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <adminoverride before="Mage_Adminhtml">Custom_AdminOverride</adminoverride>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

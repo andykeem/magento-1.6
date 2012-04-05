@@ -1,0 +1,63 @@
+<?php
+
+class Acadaca_History_Model_Observer
+{   
+    /**
+     * Update product attribute information if value has been changed.
+     * 
+     * @param Varien_Event_Observer $observer
+     * @return Acadaca_History_Model_Observer 
+     */
+    public function updateProductAttributeHistory(Varien_Event_Observer $observer)
+    {
+        $event = $observer->getEvent();
+        
+        $product = $event->getProduct();
+        //$request = $event->getRequest();
+                
+        $adminUserId = Mage::getSingleton('admin/session')->getUser()->getId();
+        foreach ($product->getAttributes() as $attribute) {
+            //Mage::log(get_class($attribute));
+            //Mage::log('attribute: ' . var_export($attribute->debug(), 1));
+            $attrCode = $attribute->getAttributeCode();
+            if ($product->dataHasChangedFor($attrCode)) {
+                
+                /**
+                Mage::log('Attribute Code: ' . $attrCode);
+                Mage::log('Old: ' . var_export($product->getOrigData($attrCode), 1));
+                Mage::log('New: ' . var_export($product->getData($attrCode), 1));
+                Mage::log('New Attr: ' . var_export($product->getResource()->getAttribute($attrCode)->getFrontend()->getValue($product), 1));
+                foreach ($product->getMediaAttributes() as $attr) {
+                    Mage::log('Media Attr: ' . var_export($attr->getFrontend()->getValue($product), 1));
+                }
+                */
+                
+                if ($attrCode == 'media_gallery') continue;
+                
+                if ($attribute->getBackendType() == 'datetime') {
+                    $dateOrig = $product->getOrigData($attrCode);
+                    $date = $product->getData($attrCode);
+                    if (strtotime($dateOrig) == strtotime($date)) continue;
+                }
+                
+                try {
+                    Mage::getModel('history/product_attribute')
+                        ->setProductId($product->getId())
+                        ->setProductTypeId($product->getTypeId())
+                        ->setProductSku($product->getSku())
+                        ->setProductName($product->getName())
+                        ->setAttributeId($attribute->getId())
+                        ->setAttributeCode($attribute->getAttributeCode())
+                        ->setAttributeLabel($attribute->getFrontEndLabel())
+                        ->setPreviousValue($product->getOrigData($attrCode))
+                        ->setValue($product->getData($attrCode))
+                        ->setAdminUserId($adminUserId)
+                        ->save();
+                } catch (Exception $e) {
+                    Mage::log($e->getMessage());
+                }
+            }
+        }        
+        return $this;
+    }
+}

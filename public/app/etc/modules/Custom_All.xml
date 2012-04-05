@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Custom_Log>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Core />
+            </depends>
+        </Custom_Log>
+        <Custom_SimilarSales>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Sales />
+            </depends>
+        </Custom_SimilarSales>
+        <Custom_Catalog>
+        	<active>true</active>
+        	<codePool>local</codePool>
+        	<depends>
+        		<Mage_Catalog />
+        	</depends>
+        </Custom_Catalog>
+        <Custom_Adminhtml>
+        	<active>true</active>
+        	<codePool>local</codePool>
+        	<depends>
+        		<Mage_Adminhtml />
+        	</depends>
+        </Custom_Adminhtml>
+        <Custom_AdminOverride>
+        	<active>true</active>
+        	<codePool>local</codePool>
+        	<depends>
+        		<Mage_Adminhtml />
+        	</depends>
+        </Custom_AdminOverride>
+        <Custom_Sales>
+        	<active>true</active>
+        	<codePool>local</codePool>
+        	<depends>
+        		<Mage_Sales />
+        	</depends>
+        </Custom_Sales>
+    </modules>
+</config>

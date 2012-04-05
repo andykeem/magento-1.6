@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Custom_Adminhtml>
+            <version>0.0.1</version>
+        </Custom_Adminhtml>
+    </modules>
+    <global>
+        <blocks>
+            <sales>
+                <rewrite>
+                    <adminhtml_report_filter_form_order>Custom_Adminhtml_Block_Report_Filter_Form_Order</adminhtml_report_filter_form_order>
+                </rewrite>
+            </sales>
+            <adminhtml>
+                <rewrite>
+                    <report_sales_sales_grid>Custom_Adminhtml_Block_Report_Sales_Sales_Grid</report_sales_sales_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Custom_BestSelling>
+			<version>0.0.1</version>
+		</Custom_BestSelling>
+	</modules>
+	<global>
+		
+	</global>
+	<frontend>
+		<router>
+			<update>
+			
+			</update>
+		</router>
+	</frontend>
+</config>

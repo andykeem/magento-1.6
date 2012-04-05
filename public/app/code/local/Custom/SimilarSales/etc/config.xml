@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SimilarSales>
+            <version>0.0.1</version>
+        </SimilarSales>
+    </modules>
+    <global>
+        <blocks>
+            <similarsales><class>Custom_SimilarSales_Block</class></similarsales>
+        </blocks>
+        <helpers>
+            <similarsales><class>Custom_SimilarSales_Helper</class></similarsales>
+        </helpers>
+        <models>
+            <similarsales>
+                <class>Custom_SimilarSales_Model</class>
+                <!--resourceModel>simiarlsales_resource</resourceModel-->
+            </similarsales>
+            <!--similarsales_resource>
+                <class>Custom_SimiarSales_Model_Resource</class>
+                <entities>
+                    <table></table>
+                </entities>
+            </similarsales_resource-->
+        </models>
+    </global>
+</config>

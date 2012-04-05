@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Custom_Sales>
+            <version>0.0.1</version>
+        </Custom_Sales>
+    </modules>
+    <global>
+        <models>
+            <sales_resource>
+                <rewrite>
+                    <report_order_collection>Custom_Sales_Model_Resource_Report_Order_Collection</report_order_collection>
+                </rewrite>
+            </sales_resource>
+        </models>
+    </global>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Acadaca_History>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Acadaca_History>
+    </modules>
+</config>
