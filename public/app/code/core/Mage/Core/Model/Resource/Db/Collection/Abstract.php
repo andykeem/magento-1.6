@@ -517,8 +517,7 @@ abstract class Mage_Core_Model_Resource_Db_Collection_Abstract extends Varien_Da
              * @var string $query
              */
             $query       = $this->_prepareSelect($this->getSelect());
-			Mage::log(var_export('q: ' . $query, 1));
-            $this->_data = $this->_fetchAll($query, $this->_bindParams);
+			$this->_data = $this->_fetchAll($query, $this->_bindParams);
             $this->_afterLoadData();
         }
         return $this->_data;

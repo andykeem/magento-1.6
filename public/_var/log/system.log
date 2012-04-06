@@ -1,0 +1,17 @@
+2012-04-06T21:32:34+00:00 DEBUG (7): no matches..
+2012-04-06T21:33:12+00:00 DEBUG (7): matches:array (
+  0 => '<script type="text/javascript">
+//<![CDATA[',
+  1 => '//<![CDATA[',
+)
+2012-04-06T21:37:00+00:00 DEBUG (7): no matches..
+2012-04-06T21:38:25+00:00 DEBUG (7): no matches..
+2012-04-06T21:42:58+00:00 DEBUG (7): no matches..
+2012-04-06T21:43:34+00:00 DEBUG (7): no matches..
+2012-04-06T21:45:06+00:00 DEBUG (7): no matches..
+2012-04-06T21:46:09+00:00 DEBUG (7): matches:array (
+  0 => '<script type=\\"text/javascript\\">
+//<![CDATA[
+    ',
+  1 => '//<![CDATA[',
+)

@@ -2,10 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/etc/local.xml</file>
-        <file>file:/C:/xampp/htdocs/magento/1.6/public/skin/frontend/custom/default/css/styles.css</file>
-        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/design/frontend/custom/default/template/page/html/header.phtml</file>
-        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/design/frontend/custom/default/template/page/html/head.phtml</file>
-        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/etc/modules/Acadaca_All.xml</file>
+        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/code/local/Acadaca/History/controllers/Adminhtml/IndexController.php</file>
+        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/code/local/Acadaca/History/Model/Observer.php</file>
+        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/code/local/Acadaca/History/Helper/Data.php</file>
+        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/code/local/Acadaca/History/etc/config.xml</file>
+        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/code/local/Custom/Test/etc/config.xml</file>
+        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/code/local/Custom/Test/controllers/IndexController.php</file>
+        <file>file:/C:/xampp/htdocs/magento/1.6/public/app/code/local/Acadaca/History/Block/Adminhtml/Catalog/Product/Attribute/Edit/Tabs.php</file>
     </open-files>
 </project-private>

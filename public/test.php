@@ -29,3 +29,9 @@ function getSimilarSales($pid)
 	return $products;	
 }
 //getSimilarSales(27);
+
+function getMageConfig()
+{
+    $config = Mage::getConfig();
+    var_dump($config);
+}

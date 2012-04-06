@@ -19,4 +19,17 @@
             </adminhtml>
         </blocks>
     </global>
+    <stores>
+        <admin>
+<!--             default admin design package and theme -->
+            <design>
+                <package>
+                    <name>custom</name>
+                </package>
+                <theme>
+                    <default>default</default>
+                </theme>
+            </design>
+        </admin>
+    </stores>
 </config>

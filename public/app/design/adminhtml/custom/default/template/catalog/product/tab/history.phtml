@@ -1,0 +1,27 @@
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
+    <tr>
+        <th>Attribute</th>
+        <th>New Value</th>
+        <th>Updated At</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+    <?php foreach ($this->getItems() as $item): ?>
+    <?php if ($item->getPreviousValue()) : //Mage::log(var_export($item->debug(), 1)); ?>
+            <tr>
+                <td><?php echo $item->getAttributeLabel() ?></td>
+                <td><?php echo $item->getValue() ?></td>
+                <td><?php echo $item->getUpdatedAt() ?></td>
+                <td><?php echo $item->getEmail() ?></td>
+                <td><a href="#" onclick="revert('<?php echo $item->getAttributeCode() ?>', '<?php echo $item->getValue() ?>')">Revert</a></td>
+            </tr>
+    <?php endif; ?>
+    <?php endforeach; ?>
+</table>
+<script>
+alert('hi..');
+function revert(a, b){
+    alert('a: ' + a);
+}
+
+</script>

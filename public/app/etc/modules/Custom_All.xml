@@ -16,32 +16,36 @@
             </depends>
         </Custom_SimilarSales>
         <Custom_Catalog>
-        	<active>true</active>
-        	<codePool>local</codePool>
-        	<depends>
-        		<Mage_Catalog />
-        	</depends>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Catalog />
+            </depends>
         </Custom_Catalog>
         <Custom_Adminhtml>
-        	<active>true</active>
-        	<codePool>local</codePool>
-        	<depends>
-        		<Mage_Adminhtml />
-        	</depends>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Adminhtml />
+            </depends>
         </Custom_Adminhtml>
         <Custom_AdminOverride>
-        	<active>true</active>
-        	<codePool>local</codePool>
-        	<depends>
-        		<Mage_Adminhtml />
-        	</depends>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Adminhtml />
+            </depends>
         </Custom_AdminOverride>
         <Custom_Sales>
-        	<active>true</active>
-        	<codePool>local</codePool>
-        	<depends>
-        		<Mage_Sales />
-        	</depends>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Sales />
+            </depends>
         </Custom_Sales>
+        <Custom_Test>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Custom_Test>
     </modules>
 </config>

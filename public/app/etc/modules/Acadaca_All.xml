@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        
+        <Acadaca_History>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Adminhtml />
+                <Mage_Catalog />
+            </depends>
+        </Acadaca_History>
     </modules>
 </config>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <history translate="title" module="history">
+            <title>History</title>
+            <sort_order>80</sort_order>
+            <children>
+                <product_attribute translate="title" module="history">
+                    <title>Product Attribute</title>
+                    <action>adminhtml/index</action>
+                    <sort_order>5</sort_order>
+                </product_attribute>
+            </children>
+        </history>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <history translate="title" module="history">
+                        <title>History</title>
+                        <sort_order>80</sort_order>
+                        <children>
+                            <product_attribute translate="title" module="history">
+                                <title>Product Attribute</title>
+                                <sort_order>5</sort_order>
+                            </product_attribute>
+                        </children>
+                    </history>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
