@@ -40,7 +40,7 @@ var widgetTools = {
         }
     },
 
-    openDialog: function(widgetUrl) { alert('hi..');
+    openDialog: function(widgetUrl) {
         if ($('widget_window') && typeof(Windows) != 'undefined') {
             Windows.focus('widget_window');
             return;

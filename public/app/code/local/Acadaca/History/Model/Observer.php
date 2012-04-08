@@ -12,7 +12,8 @@ class Acadaca_History_Model_Observer
     {
         $event = $observer->getEvent();        
         $product = $event->getProduct();
-        //$request = $event->getRequest();
+        $request = $event->getRequest();
+        Mage::log('request: ' . var_export($request->getParams(), 1));
                 
         $adminUserId = Mage::helper('history')->getAdminUser()->getId();
         foreach ($product->getAttributes() as $attribute) {
@@ -21,17 +22,17 @@ class Acadaca_History_Model_Observer
             $attrCode = $attribute->getAttributeCode();
             if ($product->dataHasChangedFor($attrCode)) {
                 
+                if ($attrCode == 'media_gallery') continue;
                 /**
                 Mage::log('Attribute Code: ' . $attrCode);
                 Mage::log('Old: ' . var_export($product->getOrigData($attrCode), 1));
                 Mage::log('New: ' . var_export($product->getData($attrCode), 1));
                 Mage::log('New Attr: ' . var_export($product->getResource()->getAttribute($attrCode)->getFrontend()->getValue($product), 1));
-                foreach ($product->getMediaAttributes() as $attr) {
-                    Mage::log('Media Attr: ' . var_export($attr->getFrontend()->getValue($product), 1));
-                }
                 */
+                //foreach ($product->getMediaAttributes() as $attr) {
+                  //  Mage::log('Media Attr: ' . var_export($attr->getFrontend()->getValue($product), 1));
+                //}                
                 
-                if ($attrCode == 'media_gallery') continue;
                 try {
                     Mage::getModel('history/product_attribute')
                         ->setProductId($product->getId())

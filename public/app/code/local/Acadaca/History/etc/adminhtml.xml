@@ -7,7 +7,7 @@
             <children>
                 <product_attribute translate="title" module="history">
                     <title>Product Attribute</title>
-                    <action>adminhtml/index</action>
+                    <action>adminhtml/history</action>
                     <sort_order>5</sort_order>
                 </product_attribute>
             </children>
