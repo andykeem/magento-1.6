@@ -17,7 +17,7 @@ var history = {
                 className: 'magento',
                 windowClassName: 'popup-window',
                 title: 'History',
-                width: 700,
+                width: 900,
                 minHeight: 500,
                 maxHeight: 500,
                 zIndex: 1000,

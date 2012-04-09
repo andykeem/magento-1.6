@@ -1,0 +1,29 @@
+<div class="grid">
+    <div class="hor-scroll">
+        <table class="data" cellspacing="0">
+            <thead>
+                <tr class="headings">
+                    <th>Attribute</th>
+                    <th>New Value</th>
+                    <th>Updated At</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $i = 0; foreach ($this->getItems() as $item): ?>
+                <?php if ($item->getValue()) : //Mage::log(var_export($item->debug(), 1)); 
+                        $class = ($i % 2) ? '' : ' class="even"'; ?>
+                        <tr<?php echo $class ?>>
+                            <td><?php echo $item->getAttributeLabel() ?></td>
+                            <td><?php echo $item->getValue() ?></td>
+                            <td><?php echo $item->getUpdatedAt() ?></td>
+                            <td><?php echo $item->getEmail() ?></td>
+                            <td><a href="#" onclick="history.revert('<?php echo $item->getAttributeCode() ?>', '<?php echo $item->getValue() ?>')">Revert</a></td>
+                        </tr>
+                <?php endif; ?>
+                <?php $i++; endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>

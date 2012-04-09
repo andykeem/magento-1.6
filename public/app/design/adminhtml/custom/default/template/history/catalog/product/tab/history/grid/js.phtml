@@ -1,0 +1,27 @@
+<?php 
+Mage::log(__FILE__ . __LINE__); 
+Mage::log('this: ' . var_export($this->debug(), 1));
+$block = $this->getGridBlock(); Mage::log('gridBlock: ' . var_export($block->debug(), 1)); Mage::log('class: ' . get_class($this));
+?>
+<script type="text/javascript">
+//<![CDATA[
+    <?php echo $block->getJsObjectName() ?> = new varienGrid('<?php echo $block->getId() ?>', '<?php echo $block->getGridUrl() ?>', '<?php echo $block->getVarNamePage() ?>', '<?php echo $block->getVarNameSort() ?>', '<?php echo $block->getVarNameDir() ?>', '<?php echo $block->getVarNameFilter() ?>');
+    <?php echo $block->getJsObjectName() ?>.useAjax = '<?php echo $block->getUseAjax() ?>';
+    <?php if($block->getRowClickCallback()): ?>
+        <?php echo $block->getJsObjectName() ?>.rowClickCallback = <?php echo $block->getRowClickCallback() ?>;
+    <?php endif; ?>
+    <?php if($block->getCheckboxCheckCallback()): ?>
+        <?php echo $block->getJsObjectName() ?>.checkboxCheckCallback = <?php echo $block->getCheckboxCheckCallback() ?>;
+    <?php endif; ?>
+    <?php if($block->getRowInitCallback()): ?>
+        <?php echo $block->getJsObjectName() ?>.initRowCallback = <?php echo $block->getRowInitCallback() ?>;
+        <?php echo $block->getJsObjectName() ?>.initGridRows();
+    <?php endif; ?>
+    <?php if($block->getMassactionBlock()->isAvailable()): ?>
+    <?php echo $block->getMassactionBlock()->getJavaScript() ?>
+    <?php endif ?>
+    <?php echo $block->getAdditionalJavaScript(); ?>
+//]]>
+</script>
+
+<div>TEST</div>

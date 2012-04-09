@@ -108,9 +108,9 @@ Default layout, loads most of the pages
                 <action method="addItem"><type>js</type><name>mage/adminhtml/wysiwyg/tiny_mce/setup.js</name><params/><if/><condition>can_load_tiny_mce</condition></action>
                 
                 <action method="addJs"><script>jquery/jquery-1.7.1.min.js</script></action>
-                <action method="addJs"><script>jquery/jquery-ui-1.8.18.custom.min.js</script></action>
+<!--                <action method="addJs"><script>jquery/jquery-ui-1.8.18.custom.min.js</script></action>-->
                 <action method="addJs"><script>jquery/jquery-fix.js</script></action>
-                <action method="addItem"><type>skin_css</type><name>css/jquery-ui/custom-theme/jquery-ui-1.8.18.custom.css</name></action>
+<!--                <action method="addItem"><type>skin_css</type><name>css/jquery-ui/custom-theme/jquery-ui-1.8.18.custom.css</name></action>-->
                 <block type="core/html_calendar" name="head.calendar" as="calendar" template="page/js/calendar.phtml"/>
             </block>
 

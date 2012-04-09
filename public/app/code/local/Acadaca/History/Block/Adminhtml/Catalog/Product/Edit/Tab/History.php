@@ -5,7 +5,7 @@ class Acadaca_History_Block_Adminhtml_Catalog_Product_Edit_Tab_History extends M
     public function __construct()
     {
         parent::__construct();
-        $this->setTemplate('catalog/product/tab/history.phtml');
+        $this->setTemplate('history/catalog/product/tab/history.phtml');
     }
     
     public function getItems()

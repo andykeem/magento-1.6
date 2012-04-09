@@ -5,5 +5,8 @@
             <action method="addItem"><type>skin_js</type><name>js/history.js</name></action>
             <action method="addItem"><type>skin_css</type><name>css/history.css</name></action>
         </reference>
+        <reference name="js">
+            <block type="history/adminhtml_catalog_product_edit_tab_history_grid_js" name="history_product_dialog_grid_js" after="-" template="history/catalog/product/tab/history/grid/js.phtml" />
+        </reference>>
     </adminhtml_catalog_product_edit>
 </layout>
