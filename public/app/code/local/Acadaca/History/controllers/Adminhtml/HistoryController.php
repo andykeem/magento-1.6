@@ -28,15 +28,7 @@ class Acadaca_History_Adminhtml_HistoryController extends Mage_Adminhtml_Control
         $block = $this->getLayout()
 //            ->createBlock('history/adminhtml_catalog_product_edit_tab_history')->toHtml();
             ->createBlock('history/adminhtml_catalog_product_edit_tab_history_grid');
-        
-//        Mage::log('params: ' . var_export($this->_request->getParams(), 1));
-//        
-//        $jsBlock = $this->getLayout()->createBlock('history/adminhtml_catalog_product_edit_tab_history_grid_js')
-//            ->setGridBlock($block)
-//            ->setRequest($this->_request);
-        
-//        $this->getLayout()->createBlock('adminhtml/catalog_product_edit')->append($jsBlock);
-//        Mage::log('content: ' . $block->toHtml());
+
         $this->_response->setBody($block->toHtml());
     }
 }

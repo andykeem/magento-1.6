@@ -15,7 +15,7 @@ class Acadaca_History_Block_Adminhtml_Catalog_Product_Edit_Tabs extends Mage_Adm
             
             $this->addTab('history', array(
                 'label' => Mage::helper('catalog')->__('History'),
-                'url'   => "javascript: history.dialog({url: '{$this->getUrl('adminhtml/history/editProduct')}', params: {id: '{$product->getId()}'}}); void(0);",
+                'url'   => "javascript: history.dialog({url: '{$this->getUrl('adminhtml/history/editProduct')}', params: {id: '{$product->getId()}', ajax: '1'}}); void(0);",
                 'title' => ''
             ));
         }

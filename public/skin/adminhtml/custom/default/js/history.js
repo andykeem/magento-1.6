@@ -9,7 +9,7 @@ var history = {
     dialog: function(conf){
 
         Dialog.alert(
-            { url: conf.url, options: { method: 'get', parameters: conf.params } }, 
+            { url: conf.url, options: { method: 'post', parameters: conf.params } }, 
             {
                 draggable:true,
                 resizable:true,

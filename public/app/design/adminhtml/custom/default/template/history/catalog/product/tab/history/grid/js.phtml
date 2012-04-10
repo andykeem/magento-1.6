@@ -15,7 +15,7 @@
     <?php endif; ?>
     <?php if($block->getMassactionBlock()):?>
         <?php if($block->getMassactionBlock()->isAvailable()): ?>
-        <?php echo $block->getMassactionBlock()->getJavaScript() ?>
+            <?php echo $block->getMassactionBlock()->getJavaScript() ?>
         <?php endif ?>
     <?php endif; ?>
     <?php echo $block->getAdditionalJavaScript(); ?>

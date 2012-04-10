@@ -7,6 +7,7 @@ class Acadaca_History_Block_Adminhtml_Catalog_Product_Edit_Tab_History_Grid exte
         parent::__construct();
         $this->setId('historyCatalogProductGrid');
         $this->setDefaultSort('product_history_id');
+        $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
         $this->setUseAjax(true);
     }
@@ -19,11 +20,12 @@ class Acadaca_History_Block_Adminhtml_Catalog_Product_Edit_Tab_History_Grid exte
         $collection
             ->addFieldToFilter('product_id', array('eq' => $this->getRequest()->getParam('id')))
             ->getSelect()
-            ->joinLeft(array('admin' => $tblAdminUser), 'main_table.admin_user_id = admin.user_id', array('email'))
-            ->order('updated_at DESC');
+            ->joinLeft(array('admin' => $tblAdminUser), 'main_table.admin_user_id = admin.user_id', array('email'));
         
         $this->setCollection($collection);
         parent::_prepareCollection();
+        
+//        Mage::log('sql: ' . $this->getCollection()->getSelectSql());
         return $this;
     }
 
@@ -68,7 +70,7 @@ class Acadaca_History_Block_Adminhtml_Catalog_Product_Edit_Tab_History_Grid exte
     public function getGridUrl()
     {
         return $this->getUrl('adminhtml/history/editProduct', array(
-            'id' => $this->getRequest()->getParam('id'))
-        );
+            'id' => $this->getRequest()->getParam('id')
+        ));
     }
 }
