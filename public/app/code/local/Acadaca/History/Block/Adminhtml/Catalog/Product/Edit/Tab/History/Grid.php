@@ -9,11 +9,6 @@ class Acadaca_History_Block_Adminhtml_Catalog_Product_Edit_Tab_History_Grid exte
         $this->setDefaultSort('product_history_id');
         $this->setSaveParametersInSession(true);
         $this->setUseAjax(true);
-        $this->setGridUrl($this->getUrl('history/editProduct', array(
-            'id' => $this->getRequest()->getParam('id'))
-        ));
-//        $this->setTemplate('history/catalog/product/tab/history/grid.phtml');
-//        $this->setFormKey($this->getRequest()->getParam('form_key'));
     }
     
     protected function _prepareCollection()
@@ -68,5 +63,12 @@ class Acadaca_History_Block_Adminhtml_Catalog_Product_Edit_Tab_History_Grid exte
             'sortable' => false,
             'renderer' => 'Acadaca_History_Block_Adminhtml_Widget_Grid_Column_Renderer_Action_Revert'
         ));
+    }
+    
+    public function getGridUrl()
+    {
+        return $this->getUrl('adminhtml/history/editProduct', array(
+            'id' => $this->getRequest()->getParam('id'))
+        );
     }
 }

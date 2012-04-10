@@ -1,8 +1,4 @@
-<?php 
-Mage::log(__FILE__ . __LINE__); 
-Mage::log('this: ' . var_export($this->debug(), 1));
-$block = $this->getGridBlock(); Mage::log('gridBlock: ' . var_export($block->debug(), 1)); Mage::log('class: ' . get_class($this));
-?>
+<?php $block = $this->getGridBlock(); ?>
 <script type="text/javascript">
 //<![CDATA[
     <?php echo $block->getJsObjectName() ?> = new varienGrid('<?php echo $block->getId() ?>', '<?php echo $block->getGridUrl() ?>', '<?php echo $block->getVarNamePage() ?>', '<?php echo $block->getVarNameSort() ?>', '<?php echo $block->getVarNameDir() ?>', '<?php echo $block->getVarNameFilter() ?>');
@@ -17,11 +13,11 @@ $block = $this->getGridBlock(); Mage::log('gridBlock: ' . var_export($block->deb
         <?php echo $block->getJsObjectName() ?>.initRowCallback = <?php echo $block->getRowInitCallback() ?>;
         <?php echo $block->getJsObjectName() ?>.initGridRows();
     <?php endif; ?>
-    <?php if($block->getMassactionBlock()->isAvailable()): ?>
-    <?php echo $block->getMassactionBlock()->getJavaScript() ?>
-    <?php endif ?>
+    <?php if($block->getMassactionBlock()):?>
+        <?php if($block->getMassactionBlock()->isAvailable()): ?>
+        <?php echo $block->getMassactionBlock()->getJavaScript() ?>
+        <?php endif ?>
+    <?php endif; ?>
     <?php echo $block->getAdditionalJavaScript(); ?>
 //]]>
 </script>
-
-<div>TEST</div>

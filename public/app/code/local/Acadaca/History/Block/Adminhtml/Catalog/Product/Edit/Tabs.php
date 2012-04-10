@@ -10,17 +10,7 @@ class Acadaca_History_Block_Adminhtml_Catalog_Product_Edit_Tabs extends Mage_Adm
         $product = $this->getProduct();
         if (Mage::getModel('history/product_attribute')->load($product->getId(), 'product_id')->getId()) {
 
-            $gridBlock = $this->getLayout()
-                 ->createBlock('history/adminhtml_catalog_product_edit_tab_history_grid');
-
-            Mage::log($gridBlock->toHtml());
-            Mage::log('gridBlock: ' . var_export($gridBlock->debug(), 1));
-            $jsBlock = $this->getLayout()->createBlock('history/adminhtml_catalog_product_edit_tab_history_grid_js')
-                ->setGridBlock($gridBlock);
-//                ->setRequest($this->getRequest());
-            Mage::log('jsBlock class: ' . get_class($jsBlock));
-            Mage::log('jsBlock: ' . $jsBlock->toHtml());
-            
+            $jsBlock = $this->getLayout()->createBlock('history/adminhtml_catalog_product_edit_tab_history_grid_js');
             $this->append($jsBlock);
             
             $this->addTab('history', array(
