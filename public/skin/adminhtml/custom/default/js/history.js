@@ -9,11 +9,17 @@ var history = {
     dialog: function(conf){
 
         Dialog.alert(
-            { url: conf.url, options: { method: 'post', parameters: conf.params } }, 
+            { 
+                url: conf.url, 
+                options: { 
+                    method: 'post', 
+                    parameters: conf.params
+                } 
+            }, 
             {
-                draggable:true,
-                resizable:true,
-                closable:true,
+                draggable: true,
+                resizable: true,
+                closable: true,
                 className: 'magento',
                 windowClassName: 'popup-window',
                 title: 'History',
