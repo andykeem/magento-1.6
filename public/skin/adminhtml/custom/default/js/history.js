@@ -9,13 +9,14 @@ var history = {
     dialog: function(conf){
 
         Dialog.alert(
-            { 
+            /* { 
                 url: conf.url, 
                 options: { 
                     method: 'post', 
                     parameters: conf.params
                 } 
-            }, 
+            }, */
+            '<div id="' + conf.id + '">Loading...</div>',
             {
                 draggable: true,
                 resizable: true,
